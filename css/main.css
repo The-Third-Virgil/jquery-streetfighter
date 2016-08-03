@@ -1,0 +1,67 @@
+/* Border around elements . Remove when finished */
+* {
+  outline: red 1px solid;
+}
+
+/* Body adjustments */
+body {
+	background-color: black;
+}
+
+/* Main Container */
+div.main {
+	background-color: white;
+	margin-top: 110px;
+	padding-left: 100px;
+	min-width: 1200px;
+	height: 500px;
+	position: relative;
+	z-index: 1;
+}
+
+/* Ryu Container */
+div.ryu-container {
+	float: left;
+}
+
+/* Ryu image */
+div.ryu {
+	width: 659px;
+	height: 494px;
+}
+
+div.ryu-still, div.ryu-ready, div.ryu-throwing {
+	width: 659px;
+	height: 494px;
+}
+
+div.ryu-ready, div.ryu-throwing {
+	display: none;
+}
+
+div.ryu-ready {
+	background-image: url('../images/ryu-ready-position.gif');
+}
+
+div.ryu-still {
+  background-image: url('../images/ryu-standing-still.png');
+}
+
+div.ryu-throwing {
+  background-image: url('../images/ryu-throwing-hadouken.png');
+}
+
+div.ryu-still, div.ryu-ready, div.ryu-throwing, div.hadouken {
+	background-repeat: no-repeat;
+}
+
+div.hadouken {
+	background-image: url('../images/hadouken.gif');
+	width: 156px;
+	height: 90px;
+	/* Be sure to set display to 'none' */
+	display: none;
+	float: left;
+	position: absolute;
+	z-index: 10;
+}
