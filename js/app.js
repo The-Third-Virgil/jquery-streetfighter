@@ -4,15 +4,15 @@ $(document).ready(function() {
 		$('.ryu-ready').show();
 	})
 	.mouseleave(function() {
-		$('.ryu-ready').hide();
 		$('.ryu-still').show();
+		$('.ryu-ready').hide();
 	})
 	.mousedown(function() {
 		playHadouken();
 		$('.ryu-ready').hide();
 		$('.ryu-throwing').show();
 		$('.hadouken').finish().show().animate(
-  			{'left': '1020px'},
+  			{'left': '1880px'},
   			500,
  			function() {
     			$(this).hide();
@@ -22,9 +22,41 @@ $(document).ready(function() {
 	.mouseup(function() {
 		$('.ryu-throwing').hide();
 		$('.ryu-ready').show();
-		// Ryu goes back to his ready position 
 	});
 });
+		// Begin Test Section for Flipped Ryu
+$(document).ready(function() {
+	$('.ryu1').mouseenter(function() {
+		$('.ryu-standing-still1').hide();
+		$('.ryu-ready-position1').show();
+	})
+	.mouseleave(function() {
+		$('.ryu-standing-still1').show();
+		$('.ryu-ready-position1').hide();
+	})
+	.mousedown(function() {
+		playHadouken();
+		$('.ryu-ready-position1').hide();
+		$('.ryu-throwing-hadouken1').show();
+		$('.hadouken1').finish().show().animate(
+  			{'right': '1880px'},
+  			500,
+ 			function() {
+    			$(this).hide();
+    			$(this).css('right', '520px');
+  			});
+	})
+	.mouseup(function() {
+		$('.ryu-throwing-hadouken1').hide();
+		$('.ryu-ready-position1').show();
+	});
+});
+
+	// End Test Section
+
+
+	
+
 function playHadouken () {
 	$('#hadouken-sound')[0].volume = 0.5;
 	$('#hadouken-sound')[0].load();

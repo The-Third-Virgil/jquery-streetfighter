@@ -7,7 +7,9 @@ body {
 div.main {
 	background-color: white;
 	margin-top: 110px;
+	/* Adjust padding as test for Flipped Ryu */
 	padding-left: 100px;
+	padding-right: 100px;
 	min-width: 1200px;
 	height: 500px;
 	position: relative;
@@ -25,12 +27,12 @@ div.ryu {
 	height: 494px;
 }
 
-div.ryu-still, div.ryu-ready, div.ryu-throwing {
+div.ryu-still, div.ryu-ready, div.ryu-throwing, div.ryu-cool {
 	width: 659px;
 	height: 494px;
 }
 
-div.ryu-ready, div.ryu-throwing {
+div.ryu-ready, div.ryu-throwing, div.ryu-cool {
 	display: none;
 }
 
@@ -46,7 +48,11 @@ div.ryu-throwing {
   background-image: url('../images/ryu-throwing-hadouken.png');
 }
 
-div.ryu-still, div.ryu-ready, div.ryu-throwing, div.hadouken {
+div.ryu-cool {
+	background-image: url('../images/ryu-cool.gif');
+}
+
+div.ryu-still, div.ryu-ready, div.ryu-throwing, div.hadouken, div.ryu-cool {
 	background-repeat: no-repeat;
 }
 
@@ -60,4 +66,78 @@ div.hadouken {
 	top: 167px;
 	left: 520px;
 	float: left;
+}
+
+/* Testing adding Flipped Ryu */
+/* Body adjustments */
+
+
+/* Ryu Container */
+div.ryu-container1 {
+	float: right;
+}
+
+/* Ryu image */
+div.ryu1 {
+	width: 659px;
+	height: 494px;
+}
+
+div.ryu-standing-still1, div.ryu-ready-position1, div.ryu-throwing-hadouken1, div.ryu-cool1 {
+	width: 659px;
+	height: 494px;
+}
+
+div.ryu-ready-position1, div.ryu-throwing-hadouken1, div.ryu-cool1 {
+	display: none;
+}
+
+div.ryu-ready-position1 {
+	background-image: url('../images/ryu-ready-position1.gif');
+}
+
+div.ryu-standing-still1 {
+  background-image: url('../images/ryu-standing-still1.png');
+}
+
+div.ryu-throwing-hadouken1 {
+  background-image: url('../images/ryu-throwing-hadouken1.png');
+}
+
+div.ryu-cool1 {
+	background-image: url('../images/ryu-cool1.gif');
+}
+
+div.ryu-standing-still1, div.ryu-ready-position1, div.ryu-throwing-hadouken1, div.hadouken1, div.ryu-cool1 {
+	background-repeat: no-repeat;
+}
+
+div.hadouken1 {
+	background-image: url('../images/hadouken1.gif');
+	width: 156px;
+	height: 90px;
+	display: none; 
+	position: absolute;
+	z-index: 10;
+	top: 167px;
+	right: 520px;
+	float: right;
+}
+
+/* End of Test Section */
+div.text-content {
+	position: absolute;
+	left: 650px;
+	height: 425px;
+	width: 600px;
+	padding-top: 75px;
+	font-family: 'Amatic SC' , sans-serif;
+}
+
+div.how-to p {
+	width: 50%;
+	color: white;
+	font-size: 37px;
+	line-height: 45px;
+	display: inline-block;
 }
