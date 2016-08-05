@@ -23,9 +23,7 @@ $(document).ready(function() {
 		$('.ryu-throwing').hide();
 		$('.ryu-ready').show();
 	});
-});
 		// Begin Test Section for Flipped Ryu
-$(document).ready(function() {
 	$('.ryu1').mouseenter(function() {
 		$('.ryu-standing-still1').hide();
 		$('.ryu-ready-position1').show();
@@ -49,16 +47,33 @@ $(document).ready(function() {
 	.mouseup(function() {
 		$('.ryu-throwing-hadouken1').hide();
 		$('.ryu-ready-position1').show();
+			// End Test Section
 	});
+	$('body').keydown(function(e) {
+		console.log(e);
+		if(e.which == 88){
+			$('.ryu-throwing-hadouken1').hide();
+			$('.ryu-ready-position1').hide();
+			$('.ryu-standing-still1').hide();
+			$('.ryu-cool1').show();
+			$('.ryu-throwing').hide();
+			$('.ryu-ready').hide();
+			$('.ryu-still').hide();
+			$('.ryu-cool').show();
+
+
+		}
+	
+	});
+	function playHadouken () {
+		$('#hadouken-sound')[0].volume = 0.5;
+		$('#hadouken-sound')[0].load();
+		$('#hadouken-sound')[0].play();
+	}
 });
 
-	// End Test Section
+
 
 
 	
 
-function playHadouken () {
-	$('#hadouken-sound')[0].volume = 0.5;
-	$('#hadouken-sound')[0].load();
-	$('#hadouken-sound')[0].play();
-}
