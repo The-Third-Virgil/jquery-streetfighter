@@ -12,7 +12,7 @@ $(document).ready(function() {
 		$('.ryu-ready').hide();
 		$('.ryu-throwing').show();
 		$('.hadouken').finish().show().animate(
-  			{'left': '1880px'},
+  			{'left': '1920px'},
   			500,
  			function() {
     			$(this).hide();
@@ -37,7 +37,7 @@ $(document).ready(function() {
 		$('.ryu-ready-position1').hide();
 		$('.ryu-throwing-hadouken1').show();
 		$('.hadouken1').finish().show().animate(
-  			{'right': '1880px'},
+  			{'right': '1920px'},
   			500,
  			function() {
     			$(this).hide();
